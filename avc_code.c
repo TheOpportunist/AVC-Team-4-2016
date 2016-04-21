@@ -10,6 +10,13 @@ extern "C" int sleep(int sec, int usec);
 extern "C" int write_digital(int chan, char level);
 extern "C" int set_motor(int motor, int dir, int speed);
 
+// methods for camera
+// not sure if working yet
+extern "C" int take_picture();
+extern "C" int get_pixel(int row, int col, int color);
+extern "C" int display_picture(int delay_sec, int delay_usec);
+extern "C" int set_pixel(int row, int col, char red, char green, char blue);
+
 int speedL = 64;
 int speedR = 64;
 
