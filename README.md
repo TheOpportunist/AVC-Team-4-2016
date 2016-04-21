@@ -8,7 +8,7 @@ Programmers - Thomas, Fergus, Jody.
 
 Hardware - Cameron and Liam.
 
-Week 1 Checklist
+*Week 1 Checklist*
 - [x] AVC plan - Everyone
 - [ ] Prototype setup - Hardware
 - [ ] Primilary code setup - Programmers
