@@ -1,6 +1,6 @@
-# AVC Team 4 - 2016 // 10.140.72.14
+# AVC++ // 10.140.72.14
 
-This is the repository for team 4, 2016, AVC challenge.
+This is the repository for Team AVC++ for the ENGR 101 AVC Challenge 2016.
 
 **Week 1 Checklist**
 - [x] AVC plan - Everyone
