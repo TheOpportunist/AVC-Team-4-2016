@@ -19,4 +19,4 @@ This is the repository for Team AVC++ for the ENGR 101 Autonomous Vehicle Challe
 - [ ] ALL: Complete half of the progress report
 - [ ] Thomas: Ascertain progress to gauge what needs to be done the following week and assist wherever possible
 - [ ] Jody, Cameron and Fergus: program the first quadrant
-- [ ] Liam and Cameron: Utilise plan to build robot
+- [ ] Liam and Cameron: Utilise plan to build robot (CAD and paper design)
