@@ -28,3 +28,14 @@ We had a meeting over Skype to discuss our progress thus far and to establish a 
 We looked over the kaiwhata wiki together to help us get a general idea of a few things, then we moved onto discussing the general week 3 goal and revising individual roles. Our goal for week 3 is to complete quadrant 1, which involves following a straight white line and passing through a gate we need to wirelessly open. We decided Cameron and Liam would focus on hardware, while Jody and Cameron would work together on 1 computer to write the code, focusing on following the line, testing it, then worrying about the gate. Thomas will have his attention split between both aspects, but mostly focusing on the helping with the code.
 
 In addition, we dicussed reminders along with our progress, and it appears everyone is well on their way to completing their week 2 goals.
+
+###Weekly Progress Checklist
+- [ ] How has each team member performed against their goal set last week?
+- [ ] Have you set a goal for each team member for this/next week?
+- [ ] Has the team discussed which tasks are the most important or urgent?
+- [ ] Do any team members need more help to complete their assigned task(s)?
+- [ ] Have you updated the task list on Github this week?
+- [ ] Are all relevant code, bot photos and design files on the team Github?
+- [ ] Have you noted which members attended labs and team meetings?
+- [ ] Have team members shared their draft report sections (if the team decided they wanted to do that)?
+- [ ] Are there any tasks that need to be done for progress tp be made that have NOT been assigned to a team member?
