@@ -10,10 +10,10 @@ This is the repository for Team AVC++ for the ENGR 101 Autonomous Vehicle Challe
 - [x] Liam and Cameron: Begin to construct framework, create a plan
 
 **Week 2 Checklist**
-- [ ] ALL: Attend meeting, write report introduction
+- [x] ALL: Attend meeting, write report introduction
 - [x] Thomas: Organise meeting, making sure to take notes and edit GitHub, also ensure a solid plan is in place for the next lab
-- [ ] Liam/Cameron: Complete plan
-- [ ] Jody, Cameron and Fergus: Take advantage of break to learn about C++
+- [x] Liam/Cameron: Complete plan
+- [x] Jody, Cameron and Fergus: Take advantage of break to learn about C++
 
 **Week 3 Checklist**
 - [ ] ALL: Complete half of the progress report
