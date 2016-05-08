@@ -17,9 +17,9 @@ This is the repository for Team AVC++ for the ENGR 101 Autonomous Vehicle Challe
 
 **Week 3 Checklist**
 - [ ] ALL: Complete half of the progress report
-- [ ] Thomas: Ascertain progress to gauge what needs to be done the following week and assist wherever possible
-- [ ] Jody, Cameron and Fergus: program the first quadrant (work together on 1 computer, focus on following the line then opening the gate)
-- [ ] Liam and Cameron: Utilise plan to build robot (CAD and paper design)
+- [x] Thomas: Ascertain progress to gauge what needs to be done the following week and assist wherever possible
+- [ ] Jody, Cameron and Fergus: program the first quadrant (work together on 1 computer, focus on following the line then opening the gate) (Still need to open gate)
+- [x] Liam and Cameron: Utilise plan to build robot (CAD and paper design)
 
 **Week 2 Meeting - 27/4/16 3pm**
 In attendence: Thomas, Jody, Fergus, Liam, Cameron (everyone)
