@@ -73,6 +73,6 @@ int main(){
       set_motor(1, v_left);
       set_motor(2, v_right);
     }
-    Sleep(0,500);
+    Sleep(0,50);
 }
 }
