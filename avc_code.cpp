@@ -55,7 +55,7 @@ int main(){
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
     //}
-    if (midlle>left && middle > right){
+    if (middle>left && middle > right){
       v_left = 80;
       v_right = 80;
       set_motor(1, v_left);
@@ -73,5 +73,6 @@ int main(){
       set_motor(1, v_left);
       set_motor(2, v_right);
     }
-    sleep(0,500000);
+    Sleep(0,500);
+}
 }
