@@ -39,7 +39,7 @@ int v_left = 0;
 int v_right = 0;
 
 int main(){
-  int init_hardware();
+  init(0);
   int i;
   int left;
   int right;
@@ -47,9 +47,11 @@ int main(){
   while(1)
   {
     take_picture();
+    printf("picture taken\n");
     left = get_pixel(120, 80, 3);
     middle = get_pixel(120, 160, 3);
     right = get_pixel(120, 240, 3);
+    printf(" left=%d middle=%d right=%d\n", left, middle, right);
     //int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
