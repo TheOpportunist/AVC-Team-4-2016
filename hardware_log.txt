@@ -1,4 +1,4 @@
----------- AVC++ Hardware Log ----------
+------------- AVC++ Hardware Log -------------
 Primary contributors: Liam Byrne, Cameron Laing
 
 TO DO
@@ -12,3 +12,5 @@ Cut to compact size?
 UPDATE LIST
 12/5: Complete test model
 16/5: Initial application of roof on robot
+
+
