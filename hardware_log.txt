@@ -2,8 +2,9 @@
 Primary contributors: Liam Byrne, Cameron Laing
 
 TO DO
+[ ] New taildragger!
 [*] Replace camera mount with rear wheel mount
-[?] New left wheel
+[ ] New left wheel?
 [*] Secure wheel motor wiring
 [*] Construct plan for roof with battery mounting plate
 [*] Guiding wires
