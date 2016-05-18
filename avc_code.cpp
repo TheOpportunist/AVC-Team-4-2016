@@ -62,7 +62,7 @@ int main(){
    receive_from_server(message); //this may be buggy!
    printf("%s", message);
    send_to_server(message);
-return 0;
+//return 0;
   
   while(1)
   {
