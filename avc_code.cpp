@@ -53,9 +53,6 @@ int main(){
   int right;
   int middle;
   
-  // This sets up the RPi hardware and ensures
-   // everything is working correctly
-   init(1);
    //connects to server with the ip address 192.168.1.2
    connect_to_server("130.195.6.196", 1024);
    //sends a message to the connected server
