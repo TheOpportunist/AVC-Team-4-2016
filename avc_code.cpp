@@ -71,7 +71,7 @@ int main(){
     left = get_pixel(120, 80, 3);
     middle = get_pixel(120, 160, 3);
     right = get_pixel(120, 240, 3);
-    printf(" left=%d middle=%d right=%d\n", left, middle, right);
+    printf(" left=%d middle=%d right=%d \n", left, middle, right);
     //int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
@@ -80,21 +80,21 @@ int main(){
     if (middle>left && middle > right){
       v_left = 240;
       v_right = 240;
-      set_motor(1, -1*v_left);
+      set_motor(1, v_left);
       set_motor(2, v_right);
     }
     else if (right>middle && right>left) {
       v_left = 240;
       v_right = 120;
-      set_motor(1, -1*v_left);
+      set_motor(1, v_left);
       set_motor(2, v_right);
     }
     else if (left>middle && left>right) {
       v_left = 120;
       v_right = 240;
-      set_motor(1, -1*v_left);
+      set_motor(1, v_left);
       set_motor(2, v_right);
     }
-    Sleep(0,50);
+    //Sleep(0,50);
 }
 }
