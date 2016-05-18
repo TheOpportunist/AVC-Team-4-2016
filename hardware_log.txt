@@ -4,7 +4,7 @@ Primary contributors: Liam Byrne, Cameron Laing
 TO DO
 [ ] New taildragger!
 [*] Replace camera mount with rear wheel mount
-[ ] New left wheel?
+[*] New left wheel?
 [*] Secure wheel motor wiring
 [*] Construct plan for roof with battery mounting plate
 [*] Guiding wires
@@ -14,4 +14,4 @@ UPDATE LIST
 12/5: Complete test model
 16/5: Initial application of roof on robot
 18/5: Attach undermounted wire holder to robot. Switch out rear wheel and camera mounts. Glue battery mount to top of robot roof.
-
+19/5: Left wheel does not need changing. Almost done with the final robot.
