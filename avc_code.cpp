@@ -54,14 +54,14 @@ int main(){
   int middle;
   
    //connects to server with the ip address 192.168.1.2
-   connect_to_server("130.195.6.196", 1024);
+   //connect_to_server("130.195.6.196", 1024);
    //sends a message to the connected server
-   send_to_server("Please");
+   //send_to_server("Please");
    //receives message from the connected server
-   char message[24];
-   receive_from_server(message); //this may be buggy!
-   printf("%s", message);
-   send_to_server(message);
+   //char message[24];
+   //receive_from_server(message); //this may be buggy!
+   //printf("%s", message);
+  //send_to_server(message);
 //return 0;
   
   while(1)
@@ -78,21 +78,21 @@ int main(){
     //sum = sum + i*white;
     //}
     if (middle>left && middle > right){
-      v_left = 80;
-      v_right = 80;
-      set_motor(1, v_left);
+      v_left = 240;
+      v_right = 240;
+      set_motor(1, -1*v_left);
       set_motor(2, v_right);
     }
     else if (right>middle && right>left) {
-      v_left = 80;
-      v_right = 20;
-      set_motor(1, v_left);
+      v_left = 240;
+      v_right = 120;
+      set_motor(1, -1*v_left);
       set_motor(2, v_right);
     }
     else if (left>middle && left>right) {
-      v_left = 20;
-      v_right = 80;
-      set_motor(1, v_left);
+      v_left = 120;
+      v_right = 240;
+      set_motor(1, -1*v_left);
       set_motor(2, v_right);
     }
     Sleep(0,50);
