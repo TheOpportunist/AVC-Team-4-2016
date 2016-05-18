@@ -80,20 +80,20 @@ int main(){
     if (middle>left && middle > right){
       v_left = 240;
       v_right = 240;
-      set_motor(1, v_left);
-      set_motor(2, v_right);
+      set_motor(1, -1*v_left);
+      set_motor(2, -1*v_right);
     }
     else if (right>middle && right>left) {
       v_left = 240;
       v_right = 120;
-      set_motor(1, v_left);
-      set_motor(2, v_right);
+      set_motor(1, -1*v_left);
+      set_motor(2, -1*v_right);
     }
     else if (left>middle && left>right) {
       v_left = 120;
       v_right = 240;
-      set_motor(1, v_left);
-      set_motor(2, v_right);
+      set_motor(1, -1*v_left);
+      set_motor(2, -1*v_right);
     }
     //Sleep(0,50);
 }
