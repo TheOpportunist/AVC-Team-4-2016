@@ -1,2 +1,2 @@
-output:input.cpp
-	gcc -L/usr/lib -o output input.cpp -lE101
+output:avc_code.cpp
+	gcc -L/usr/lib -o output avc_code.cpp -lE101
