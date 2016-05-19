@@ -51,25 +51,30 @@ int main(){
   int right;
   int middle;
   
+  /**
    //connects to server with the ip address 192.168.1.2
-   //connect_to_server("130.195.6.196", 1024);
+   connect_to_server("130.195.6.196", 1024);
    //sends a message to the connected server
-   //send_to_server("Please");
+   send_to_server("Please");
    //receives message from the connected server
-   //char message[24];
-   //receive_from_server(message); //this may be buggy!
-   //printf("%s", message);
-  //send_to_server(message);
-//return 0;
+   char message[24];
+   receive_from_server(message); //this may be buggy!
+   printf("%s", message);
+  send_to_server(message);
+return 0;
+*/
   
   while(1)
   {
     take_picture();
     printf("picture taken\n");
+    
+    /**
     left = get_pixel(80, 120, 3);
     middle = get_pixel(160, 120, 3);
     right = get_pixel(240, 120, 3);
     printf(" left=%d middle=%d right=%d \n", left, middle, right);
+    */
     
     //int sum = 0;
     //for(i=0, i<320, i++) {
@@ -77,6 +82,26 @@ int main(){
     //sum = sum + i*white;
     //}
     
+    int sum = 0;
+    float kp = -255/600;
+    int proportional_signal = 0;
+    int i, w, s;
+
+    for(i=0, i<320, i++){
+      w = get_pixel(i,120,3);
+    if(w>127){
+      s=1;
+    };
+    else{
+      s=0;
+    };
+    sum = sum + (i-160)*s;
+    }
+    proportional_signal = sum*kp;
+    set_motor(1, kp*proportional_signal);
+    set_motor(2, kp*proportional_signal);
+    
+    /**
     if (middle > left && middle > right){
       v_left = 175;
       v_right = 175;
@@ -95,6 +120,8 @@ int main(){
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
+    */
+    
     printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
 }
