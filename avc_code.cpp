@@ -1,10 +1,9 @@
 // Code for AVC challenge
 
 #include <stdio.h>
-
-//#include <pthread.h>
 #include <time.h>
 #include <string.h>
+//#include <pthread.h>
 
 // sudo gcc -Wall
 extern "C" int init_hardware();
@@ -34,14 +33,13 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-
 int v_left = 0;
 int v_right = 0;
 
-# include <stdio.h>
-# include <time.h>
+//# include <stdio.h> // are these needed? Already declared once!
+//# include <time.h>
 
-extern "C" int init(int d_lev);
+//extern "C" int init(int d_lev);
 extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
@@ -77,21 +75,23 @@ int main(){
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
     //}
-    if (middle>left && middle > right){
-      v_left = 120;
-      v_right = 120;
+    
+    //if (middle > left && middle > right){ // ORIGINAL
+    if (middle > left && middle < right){
+      v_left = 128;
+      v_right = 128;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
-    else if (right>middle && right>left) {
-      v_left = 120;
-      v_right = 90;
+    else if (right > middle && right > left) {
+      v_left = 128;
+      v_right = 64;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
-    else if (left>middle && left>right) {
-      v_left = 90;
-      v_right = 120;
+    else if (left > middle && left > right) {
+      v_left = 64;
+      v_right = 128;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
