@@ -19,4 +19,4 @@ UPDATE LIST
 
 NOTES (IMPORTANT: READ THIS!)
 After testing it appears that indeed the right motor is faulty as when the robot is put to the left side of the line (where the robot will want to turn right to correct, ) the right wheel stops completely. When the opposite case is exercised then the left wheel simply slows down to half the speed like it should.
-This showss that the code is not the main cause of the issues had today (22 May 2016) and that the motor should be replaced ASAP.
+This showss that the code is not the main cause of the issues had today (19 May 2016) and that the motor should be replaced ASAP.
