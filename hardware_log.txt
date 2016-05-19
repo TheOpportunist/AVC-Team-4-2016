@@ -3,6 +3,7 @@ Primary contributors: Liam Byrne, Cameron Laing
 
 TO DO
 [ ] New taildragger!
+[ ] Right motor replacement!
 [*] Replace camera mount with rear wheel mount
 [*] New left wheel?
 [*] Secure wheel motor wiring
@@ -15,3 +16,7 @@ UPDATE LIST
 16/5: Initial application of roof on robot
 18/5: Attach undermounted wire holder to robot. Switch out rear wheel and camera mounts. Glue battery mount to top of robot roof.
 19/5: Left wheel does not need changing. Almost done with the final robot.
+
+NOTES (IMPORTANT: READ THIS!)
+After testing it appears that indeed the right motor is faulty as when the robot is put to the left side of the line (where the robot will want to turn right to correct, ) the right wheel stops completely. When the opposite case is exercised then the left wheel simply slows down to half the speed like it should.
+This showss that the code is not the main cause of the issues had today (22 May 2016) and that the motor should be replaced ASAP.
