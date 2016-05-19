@@ -78,20 +78,20 @@ int main(){
     
     //if (middle > left && middle > right){ // ORIGINAL
     if (middle > left && middle < right){
-      v_left = 128;
-      v_right = 128;
+      v_left = 150;
+      v_right = 150;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (right > middle && right > left) {
-      v_left = 128;
-      v_right = 64;
+      v_left = 150;
+      v_right = 50;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (left > middle && left > right) {
-      v_left = 64;
-      v_right = 128;
+      v_left = 50;
+      v_right = 150;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
