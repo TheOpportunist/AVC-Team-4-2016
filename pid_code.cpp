@@ -32,22 +32,24 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-take_picture();
-int sum = 0;
-float kp = 0.5;
-int proportional_signal = 0;
-int i, w, s;
+while(1) {
+  take_picture();
+  int sum = 0;
+  float kp = -255/600;
+  int proportional_signal = 0;
+  int i, w, s;
 
-for(i=0, i<320, i++){
-  w = get_pixel(i,120,3);
-  if(w>127){
-    s=1;
-  };
-  else{
-    s=0;
-  };
-  sum = sum + (i-160)*s;
+  for(i=0, i<320, i++){
+    w = get_pixel(i,120,3);
+   if(w>127){
+     s=1;
+   };
+   else{
+     s=0;
+   };
+    sum = sum + (i-160)*s;
+  }
+  proportional_signal = sum*kp;
+  set_motor(1, kp*proportional_signal);
+  set_motor(2, kp*proportional_signal);
 }
-proportional_signal = sum*kp;
-set_motor(1, proportional_signal*255/600);
-set_motor(2, -1*proportional_signal*255/600);
