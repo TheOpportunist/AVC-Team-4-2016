@@ -70,6 +70,7 @@ int main(){
     middle = get_pixel(160, 120, 3);
     right = get_pixel(240, 120, 3);
     printf(" left=%d middle=%d right=%d \n", left, middle, right);
+    
     //int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
