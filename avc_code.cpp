@@ -64,7 +64,7 @@ int main(){
 return 0;
 */
   
-  //while(1)
+  while(1)
   //{
   take_picture();
   printf("picture taken\n");
@@ -123,6 +123,7 @@ return 0;
     }
     */
     
-    printf(" v_left=%d v_right=%d \n", v_left, v_right);
+}
+    //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
 }
