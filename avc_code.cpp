@@ -68,9 +68,9 @@ int main(){
   {
     take_picture();
     printf("picture taken\n");
-    left = get_pixel(80, 120, 3);
-    middle = get_pixel(160, 120, 3);
-    right = get_pixel(240, 120, 3);
+    left = get_pixel(120, 80, 3);
+    middle = get_pixel(120, 160, 3);
+    right = get_pixel(120, 240, 3);
     printf(" left=%d middle=%d right=%d \n", left, middle, right);
     //int sum = 0;
     //for(i=0, i<320, i++) {
@@ -78,20 +78,20 @@ int main(){
     //sum = sum + i*white;
     //}
     if (middle>left && middle > right){
-      v_left = 240;
-      v_right = 240;
+      v_left = 60;
+      v_right = 60;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (right>middle && right>left) {
-      v_left = 240;
-      v_right = 120;
+      v_left = 60;
+      v_right = 30;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (left>middle && left>right) {
-      v_left = 120;
-      v_right = 240;
+      v_left = 30;
+      v_right = 60;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
