@@ -64,8 +64,8 @@ int main(){
 return 0;
 */
   
-  while(1)
-  {
+  //while(1)
+  //{
     take_picture();
     printf("picture taken\n");
     
@@ -89,17 +89,18 @@ return 0;
 
     for(i=0, i<320, i++){
       w = get_pixel(i,120,3);
-    if(w>127){
-      s=1;
-    };
-    else{
-      s=0;
-    };
+      if(w>127){
+        s=1;
+      }
+      else{
+        s=0;
+      }
     sum = sum + (i-160)*s;
     }
     proportional_signal = sum*kp;
     set_motor(1, kp*proportional_signal);
     set_motor(2, kp*proportional_signal);
+  }
     
     /**
     if (middle > left && middle > right){
