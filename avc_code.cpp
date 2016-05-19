@@ -78,23 +78,24 @@ int main(){
     //sum = sum + i*white;
     //}
     if (middle>left && middle > right){
-      v_left = 80;
-      v_right = 80;
+      v_left = 120;
+      v_right = 120;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (right>middle && right>left) {
-      v_left = 80;
-      v_right = 60;
+      v_left = 120;
+      v_right = 90;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (left>middle && left>right) {
-      v_left = 60;
-      v_right = 80;
+      v_left = 90;
+      v_right = 120;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
+    printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
 }
 }
