@@ -104,20 +104,20 @@ int main() {
     */
     
     if (middle > left && middle > right){
-      v_left = 175;
-      v_right = 175;
+      v_left = 200;
+      v_right = 200;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (right > middle && right > left) {
-      v_left = 175;
-      v_right = 50;
+      v_left = 200;
+      v_right = 150;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (left > middle && left > right) {
-      v_left = 50;
-      v_right = 175;
+      v_left = 150;
+      v_right = 200;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
