@@ -33,8 +33,8 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-//int v_left = 0;
-//int v_right = 0;
+int v_left = 0;
+int v_right = 0;
 
 //extern "C" int init(int d_lev);
 extern "C" int connect_to_server( char server_addr[15],int port);
@@ -43,10 +43,10 @@ extern "C" int receive_from_server(char message[24]);
 
 int main() {
   init(0);
-  //int i;
-  //int left;
-  //int right;
-  //int middle;
+  int i;
+  int left;
+  int right;
+  int middle;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -57,30 +57,31 @@ int main() {
    char message[24];
    receive_from_server(message); //this may be buggy!
    printf("%s", message);
-  send_to_server(message);
-return 0;
-*/
+   send_to_server(message);
+  */
 
+  /**
   int sum=0;
   float kp=-255/600;
   int proportional_signal=0;
   int i, w, s;
+  */
   
   while(true) {
     take_picture();
     printf("picture taken\n");
     
-    //left = get_pixel(80, 120, 3);
-    //middle = get_pixel(160, 120, 3);
-    //right = get_pixel(240, 120, 3);
-    //printf(" left=%d middle=%d right=%d \n", left, middle, right);
+    left = get_pixel(80, 120, 3);
+    middle = get_pixel(160, 120, 3);
+    right = get_pixel(240, 120, 3);
+    printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
     //int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
     //}
-
+    /**
     for(i=0; i<320; i++){
       //w=get_pixel(i,120,3);
       w=(i-160)*get_pixel(i, 120, 3);
@@ -100,8 +101,8 @@ return 0;
     //set_motor(2, kp*proportional_signal);
     set_motor(2, (proportional_signal/(160*1*kp))*255);
     //}
+    */
     
-    /**
     if (middle > left && middle > right){
       v_left = 175;
       v_right = 175;
@@ -120,10 +121,11 @@ return 0;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
-    */
     
-    //printf(" v_left=%d v_right=%d \n", v_left, v_right);
+    
+    printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
-    printf("%d\n", (proportional_signal/(160*1*kp))*255);
+    //printf("%d\n", (proportional_signal/(160*1*kp))*255);
   }
+  return 0;
 }
