@@ -124,6 +124,6 @@ return 0;
     
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
-    printf("%d\n", (proportional_signal/(160*1*kp))*255));
+    printf("%d\n", (proportional_signal/(160*1*kp))*255);
   }
 }
