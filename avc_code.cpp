@@ -82,8 +82,9 @@ return 0;
     //}
 
     for(i=0; i<320; i++){
-      w=get_pixel(i,120,3);
-      //w=(i-160)*get_pixel(i, 120, 3);
+      //w=get_pixel(i,120,3);
+      w=(i-160)*get_pixel(i, 120, 3);
+      sum=sum+w;
       if(w>127){
         s=1;
       }
@@ -93,7 +94,7 @@ return 0;
     sum=sum+s;
     }
     
-    proportional_signal = sum*kp;
+    proportional_signal = w*kp;
     //if(proportional_signal<255){
     //set_motor(1, kp*proportional_signal);
     set_motor(1, (proportional_signal/(160*1*kp))*255);
