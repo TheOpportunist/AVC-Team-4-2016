@@ -44,9 +44,9 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   //int i;
-  //int left;
-  //int right;
-  //int middle;
+  int left;
+  int right;
+  int middle;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -103,7 +103,7 @@ int i, w, s;
     set_motor(2, (proportional_signal/(160*1*kp))*255);
     //}
     
-    /**
+    
     if (middle > left && middle > right){
       v_left = 175;
       v_right = 175;
@@ -122,7 +122,7 @@ int i, w, s;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
-    */
+    
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
     printf("%d\n", (proportional_signal/(160*1*kp))*255);
