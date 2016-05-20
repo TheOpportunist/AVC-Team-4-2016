@@ -64,8 +64,8 @@ int main(){
 return 0;
 */
   
-  while(1)
-  //{
+  while(true)
+  {
     take_picture();
     printf("picture taken\n");
     
@@ -87,15 +87,15 @@ return 0;
     int proportional_signal = 0;
     int i, w, s;
 
-    for(i=0; i<320; i++){
-      w = get_pixel(i,120,3);
-      if(w>127){
-        s=1;
+    for(i = 0; i < 320; i++){
+      w = get_pixel(i, 120, 3);
+      if(w > 127){
+        s = 1;
       }
       else{
-        s=0;
+        s = 0;
       }
-    sum = sum + (i-160)*s;
+    sum = sum + (i - 160)*s;
     }
     
     proportional_signal = sum*kp;
@@ -122,8 +122,6 @@ return 0;
       set_motor(2, -1*v_right);
     }
     */
-}
-    
-
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
+  }
