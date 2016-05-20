@@ -86,11 +86,11 @@ int i, w, s;
     for(i=0; i<320; i++){
       w=(i-160)*get_pixel(i,120,3);
       //w=(i-160)*get_pixel(i, 120, 3);
-      if(w>127){
-        s=1;
+      if(w>0){
+        s=1; // right of line
       }
       else{
-        s=0;
+        s=0; // left of line
       }
     sum=sum+w;
     }
@@ -125,6 +125,6 @@ int i, w, s;
     */
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
-    printf("%d\n", proportional_signal);
+    printf("%d\n", (proportional_signal/(160*1*kp))*255);
   }
 }
