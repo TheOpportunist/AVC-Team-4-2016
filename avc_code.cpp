@@ -61,7 +61,7 @@ int main() {
 return 0;
 */
 
-  int sum=0;
+  //int sum=0;
   float kp=-255/600;
   int proportional_signal=0;
   int i, w, s;
@@ -90,10 +90,10 @@ return 0;
       else{
         s=0; // left of line
       }
-    sum=sum+w;
+    sum=sum+s;
     }
     
-    proportional_signal = sum*kp;
+    proportional_signal = s*kp;
     //if(proportional_signal<255){
     //set_motor(1, kp*proportional_signal);
     set_motor(1, (proportional_signal/(160*1*kp))*255);
