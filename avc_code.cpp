@@ -33,11 +33,8 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-int v_left = 0;
-int v_right = 0;
-
-//# include <stdio.h> // are these needed? Already declared once!
-//# include <time.h>
+//int v_left = 0;
+//int v_right = 0;
 
 //extern "C" int init(int d_lev);
 extern "C" int connect_to_server( char server_addr[15],int port);
@@ -64,9 +61,9 @@ int main() {
 return 0;
 */
 
-int sum = 0;
-float kp = -255/600;
-int proportional_signal = 0;
+int sum=0;
+float kp=-255/600;
+int proportional_signal=0;
 int i, w, s;
   
   while(true) {
@@ -86,20 +83,24 @@ int i, w, s;
     //sum = sum + i*white;
     //}
 
-    for(i = 0; i < 320; i++){
-      w = get_pixel(i, 120, 3);
-      if(w > 127){
-        s = 1;
+    for(i=0; i<320; i++){
+      w=get_pixel(i,120,3);
+      if(w>127){
+        s=1;
       }
       else{
-        s = 0;
+        s=0;
       }
-    sum = sum + (i - 160)*s;
+    sum=sum+(i-160)*s;
     }
     
     proportional_signal = sum*kp;
-    set_motor(1, kp*proportional_signal);
-    set_motor(2, kp*proportional_signal);
+    //if(proportional_signal<255){
+    //set_motor(1, kp*proportional_signal);
+    set_motor(1, (proportional_signal/(160*1*kp))*255);
+    //set_motor(2, kp*proportional_signal);
+    set_motor(2, (proportional_signal/(160*1*kp))*255);
+    //}
     
     /**
     if (middle > left && middle > right){
