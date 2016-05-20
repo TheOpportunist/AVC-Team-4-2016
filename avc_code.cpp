@@ -44,7 +44,7 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-int main(){
+int main() {
   init(0);
   //int i;
   //int left;
@@ -64,8 +64,7 @@ int main(){
 return 0;
 */
   
-  while(true)
-  {
+  while(true) {
     take_picture();
     printf("picture taken\n");
     
@@ -125,3 +124,4 @@ return 0;
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
   }
+}
