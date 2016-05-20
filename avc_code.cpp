@@ -63,6 +63,11 @@ int main() {
   send_to_server(message);
 return 0;
 */
+
+int sum = 0;
+float kp = -255/600;
+int proportional_signal = 0;
+int i, w, s;
   
   while(true) {
     take_picture();
@@ -80,11 +85,6 @@ return 0;
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
     //}
-    
-    int sum = 0;
-    float kp = -255/600;
-    int proportional_signal = 0;
-    int i, w, s;
 
     for(i = 0; i < 320; i++){
       w = get_pixel(i, 120, 3);
