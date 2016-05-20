@@ -126,5 +126,6 @@ int i, w, s;
     */
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
+    printf("%d\n", proportional_signal);
   }
 }
