@@ -2,7 +2,7 @@
 Primary contributors: Liam Byrne, Cameron Laing
 
 TO DO
-[ ] New taildragger!
+[!] New taildragger!
 [?] Right motor replacement!
 [*] Replace camera mount with rear wheel mount
 [*] New left wheel?
@@ -20,5 +20,7 @@ UPDATE LIST
 LOG:
 (19/5) After testing it appears that indeed the right motor is faulty as when the robot is put to the left side of the line (where the robot will want to turn right to correct, ) the right wheel stops completely. When the opposite case is exercised then the left wheel simply slows down to half the speed like it should.
 This showss that the code is not the main cause of the issues had today (19 May 2016) and that the motor should be replaced ASAP.
+
+(20/5) After extensive testing with PID and other movement control systems it has been determined the root cause of the robot's motion errors are from the taildragger. Replacement has now become absolutely essential for further progress in this challenge.
 
 
