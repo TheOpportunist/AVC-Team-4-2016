@@ -66,8 +66,8 @@ return 0;
   
   while(1)
   //{
-  take_picture();
-  printf("picture taken\n");
+    take_picture();
+    printf("picture taken\n");
     
     /**
     left = get_pixel(80, 120, 3);
@@ -122,8 +122,8 @@ return 0;
       set_motor(2, -1*v_right);
     }
     */
-    
 }
+    
+
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
-}
