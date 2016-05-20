@@ -61,7 +61,7 @@ int main() {
 return 0;
 */
 
-  //int sum=0;
+  int sum=0;
   float kp=-255/600;
   int proportional_signal=0;
   int i, w, s;
@@ -75,25 +75,25 @@ return 0;
     //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
-    int sum = 0;
+    //int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
     //}
 
     for(i=0; i<320; i++){
-      w=(i-160)*get_pixel(i,120,3);
+      w=get_pixel(i,120,3);
       //w=(i-160)*get_pixel(i, 120, 3);
-      if(w>0){
-        s=1; // right of line
+      if(w>127){
+        s=1;
       }
       else{
-        s=0; // left of line
+        s=0;
       }
     sum=sum+s;
     }
     
-    proportional_signal = s*kp;
+    proportional_signal = sum*kp;
     //if(proportional_signal<255){
     //set_motor(1, kp*proportional_signal);
     set_motor(1, (proportional_signal/(160*1*kp))*255);
