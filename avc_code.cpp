@@ -70,12 +70,10 @@ int i, w, s;
     take_picture();
     printf("picture taken\n");
     
-    /**
     left = get_pixel(80, 120, 3);
     middle = get_pixel(160, 120, 3);
     right = get_pixel(240, 120, 3);
-    printf(" left=%d middle=%d right=%d \n", left, middle, right);
-    */
+    //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
     //int sum = 0;
     //for(i=0, i<320, i++) {
