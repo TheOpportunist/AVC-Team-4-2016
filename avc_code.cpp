@@ -44,9 +44,9 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   //int i;
-  int left;
-  int right;
-  int middle;
+  //int left;
+  //int right;
+  //int middle;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -61,18 +61,18 @@ int main() {
 return 0;
 */
 
-int sum=0;
-float kp=-255/600;
-int proportional_signal=0;
-int i, w, s;
+  int sum=0;
+  float kp=-255/600;
+  int proportional_signal=0;
+  int i, w, s;
   
   while(true) {
     take_picture();
     printf("picture taken\n");
     
-    left = get_pixel(80, 120, 3);
-    middle = get_pixel(160, 120, 3);
-    right = get_pixel(240, 120, 3);
+    //left = get_pixel(80, 120, 3);
+    //middle = get_pixel(160, 120, 3);
+    //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
     //int sum = 0;
@@ -101,7 +101,7 @@ int i, w, s;
     set_motor(2, (proportional_signal/(160*1*kp))*255);
     //}
     
-    
+    /**
     if (middle > left && middle > right){
       v_left = 175;
       v_right = 175;
@@ -120,6 +120,7 @@ int i, w, s;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
+    */
     
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
