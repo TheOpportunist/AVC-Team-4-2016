@@ -75,7 +75,7 @@ return 0;
     //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
-    //int sum = 0;
+    int sum = 0;
     //for(i=0, i<320, i++) {
     //white = get_pizel(120, i, 3)
     //sum = sum + i*white;
@@ -124,6 +124,6 @@ return 0;
     
     //printf(" v_left=%d v_right=%d \n", v_left, v_right);
     //Sleep(0,5);
-    printf("%d\n", sum);
+    printf("%d\n", proportional_signal);
   }
 }
