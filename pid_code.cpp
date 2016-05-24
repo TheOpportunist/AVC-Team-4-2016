@@ -41,7 +41,7 @@ while(1) {
   int previous_error; 
   int derivative_signal = 0;
   int proportional_signal = 0;
-  int v = 45;
+  int v = -45;
   int i, w, s;
 
   for(i=0, i<320, i++){
@@ -59,6 +59,6 @@ while(1) {
   derivative_signal = (error_diff/error_period)*kd;
   previous_error = current_error;
   
-  set_motor(1, 45 - kp*proportional_signal - kd*derivative_signal);
-  set_motor(2, 45 - kp*proportional_signal - kd*derivative_signal);
+  set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
+  set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
 }
