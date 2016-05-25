@@ -61,7 +61,6 @@ int main(){
       sum = sum + (i-160)*s;
     }
     proportional_signal = sum*kp;
-    error_diff = current_error-previous_error;
     derivative_signal = (current_error-previous_error/0.1)*kd;
     previous_error = current_error;
   
