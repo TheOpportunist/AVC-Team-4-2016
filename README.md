@@ -30,9 +30,15 @@ This is the repository for Team AVC++ for the ENGR 101 Autonomous Vehicle Challe
 
 **Week 5 Checklist**
 
-- [ ] ALL: Work together to test robot, discuss progress
+- [x] ALL: Work together to test robot, discuss progress
 - [ ] Thomas, Jody, Cameron and Fergus: Complete code for second quadrant
-- [ ] Liam and Cameron: Begin chassis
+- [x] Liam and Cameron: Begin chassis
+
+**Week 6 Checklist**
+
+- [ ] ALL: Work together and test the robot
+- [ ] Thomas, Jody, Cameron and Fergus: Complete code for second quadrant
+- [ ] Liam and Cameron: Put any necessary finishing touches on robot
 
 **Week 2 Meeting - 27/4/16 3pm**
 In attendence: Thomas, Jody, Fergus, Liam, Cameron (everyone)
