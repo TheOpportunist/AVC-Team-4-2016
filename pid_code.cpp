@@ -32,9 +32,8 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-while(1) {
+int main(){
   init(0);
-  take_picture();
   int sum = 0;
   float kp = 255/600;
   float kd = 0.5;
@@ -44,6 +43,9 @@ while(1) {
   int proportional_signal = 0;
   int v = -45;
   int i, w, s;
+
+while(1) {
+  take_picture();
 
   for(i=0, i<320, i++){
     w = get_pixel(i,120,3);
@@ -62,4 +64,5 @@ while(1) {
   
   set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
   set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
+}
 }
