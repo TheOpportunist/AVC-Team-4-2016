@@ -36,7 +36,7 @@ int main(){
   init(0);
   int sum = 0;
   float kp = 0.5;
-  float kd = 0.5;
+  float kd = 5;
   int current_error;
   int previous_error; 
   int error;
@@ -49,25 +49,25 @@ int main(){
     take_picture();
 
     for(i=0; i<320; i++){
-      w = get_pixel(i,120,3);
+      w = get_pixel(120,i,3);
       error = (i-160)*w;
       current_error = current_error + error;
-    if(w>127){
-       s=1;
-    }//;
-    else{
-       s=0;
-    }//;
-      sum = sum + (i-160)*s;
+      if(w>127){
+         s=1;
+      }//;
+      else{
+        s=0;
+      }//;
+        sum = sum + (i-160)*s;
     }
     proportional_signal = sum*kp;
     derivative_signal = (current_error-previous_error/0.1)*kd;
     previous_error = current_error;
-    printf("Derivative signal is: %d", derivative_signal);
-    printf("Proportional signal is: %d", proportional_signal);
+    printf("Derivative signal is: %d /n", derivative_signal);
+    printf("Proportional signal is: %d /n", proportional_signal);
   
-    set_motor(1, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
-    set_motor(2, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
+    set_motor(1, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
+    set_motor(2, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
   }
   return 0;
 }
