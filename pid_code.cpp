@@ -39,18 +39,19 @@ int main(){
   float kd = 0.5;
   int current_error;
   int previous_error; 
-  int derivative_signal = 0;
+  int error;
+  int derivative_signal;
   int proportional_signal = 0;
   int v = 45;
   int i, w, s;
 
   while(1) {
     take_picture();
-    int error_diff = 0;
-    int error_period = 1;
 
     for(i=0; i<320; i++){
       w = get_pixel(i,120,3);
+      error = (i-160)*w;
+      current_error = current_error + error;
     if(w>127){
        s=1;
     }//;
@@ -61,13 +62,13 @@ int main(){
     }
     proportional_signal = sum*kp;
     error_diff = current_error-previous_error;
-    derivative_signal = (error_diff/error_period)*kd;
+    derivative_signal = (current_error-previous_error/0.1)*kd;
     previous_error = current_error;
   
     //set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
     //set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
-    set_motor(1, (v + kp*proportional_signal));
-    set_motor(2, (v + kp*proportional_signal));
+    set_motor(1, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
+    set_motor(2, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
   }
   return 0;
 }
