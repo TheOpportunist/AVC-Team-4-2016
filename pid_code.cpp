@@ -35,13 +35,13 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.5;
+  float kp = 0.2;
   float kd = 0.5;
   int current_error;
   int previous_error; 
   int derivative_signal = 0;
   int proportional_signal = 0;
-  int v = -45;
+  int v = 45;
   int i, w, s;
 
   while(1) {
@@ -64,8 +64,10 @@ int main(){
     derivative_signal = (error_diff/error_period)*kd;
     previous_error = current_error;
   
-    set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
-    set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
+    //set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
+    //set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
+    set_motor(1, v + kp*proportional_signal);
+    set_motor(2, v + kp*proportional_signal);
   }
   return 0;
 }
