@@ -46,6 +46,8 @@ int main(){
 
   while(1) {
     take_picture();
+    int error_diff = 0;
+    int error_period = 1;
 
     for(i=0; i<320; i++){
       w = get_pixel(i,120,3);
