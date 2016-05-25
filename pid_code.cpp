@@ -64,8 +64,6 @@ int main(){
     derivative_signal = (current_error-previous_error/0.1)*kd;
     previous_error = current_error;
   
-    //set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
-    //set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
     set_motor(1, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
     set_motor(2, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
   }
