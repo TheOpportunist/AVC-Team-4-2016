@@ -37,11 +37,11 @@ int main(){
   int sum = 0;
   float kp = 0.5;
   float kd = 5;
-  int current_error;
+  int current_error = 0;
   int previous_error; 
   int error;
   int derivative_signal;
-  int proportional_signal = 0;
+  int proportional_signal;
   int v = 45;
   int i, w, s;
 
@@ -49,14 +49,14 @@ int main(){
     take_picture();
 
     for(i=0; i<320; i++){
-      w = get_pixel(120,i,3);
+      w = get_pixel(i,120,3);
       error = (i-160)*w;
       current_error = current_error + error;
       if(w>127){
-         s=1;
+         s=0;
       }//;
       else{
-        s=0;
+        s=1;
       }//;
         sum = sum + (i-160)*s;
     }
