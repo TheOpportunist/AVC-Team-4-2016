@@ -68,8 +68,8 @@ int main(){
   
     //set_motor(1, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
-    set_motor(1, (v + (proportional_signal/(160*1*kp))*255);
-    set_motor(2, (v + (proportional_signal/(160*1*kp))*255);
+    set_motor(1, (v + (proportional_signal/(160*1*kp))*255));
+    set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
   }
   return 0;
 }
