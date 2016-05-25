@@ -33,6 +33,7 @@ extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
 while(1) {
+  init(0);
   take_picture();
   int sum = 0;
   float kp = 255/600;
