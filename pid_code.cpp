@@ -44,25 +44,26 @@ int main(){
   int v = -45;
   int i, w, s;
 
-while(1) {
-  take_picture();
+  while(1) {
+    take_picture();
 
-  for(i=0, i<320, i++){
-    w = get_pixel(i,120,3);
-   if(w>127){
-     s=1;
-   }//;
-   else{
-     s=0;
-   }//;
-    sum = sum + (i-160)*s;
-  }
-  proportional_signal = sum*kp;
-  error_diff = current_error-previous_error;
-  derivative_signal = (error_diff/error_period)*kd;
-  previous_error = current_error;
+    for(i=0; i<320; i++){
+      w = get_pixel(i,120,3);
+    if(w>127){
+       s=1;
+    }//;
+    else{
+       s=0;
+    }//;
+      sum = sum + (i-160)*s;
+    }
+    proportional_signal = sum*kp;
+    error_diff = current_error-previous_error;
+    derivative_signal = (error_diff/error_period)*kd;
+    previous_error = current_error;
   
-  set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
-  set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
-}
+    set_motor(1, v - kp*proportional_signal - kd*derivative_signal);
+    set_motor(2, v - kp*proportional_signal - kd*derivative_signal);
+  }
+  return 0;
 }
