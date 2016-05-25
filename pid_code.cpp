@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.05;
+  float kp = 0.5;
   float kd = 0.5;
   int current_error;
   int previous_error; 
@@ -63,6 +63,8 @@ int main(){
     proportional_signal = sum*kp;
     derivative_signal = (current_error-previous_error/0.1)*kd;
     previous_error = current_error;
+    printf("Derivative signal is: %d", derivative_signal);
+    printf("Proportional signal is: %d", proportional_signal);
   
     set_motor(1, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
     set_motor(2, (v + (proportional_signal/(160*kp))*255 + derivative_signal));
