@@ -39,7 +39,7 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   int i;
-  int v_left = -210;
+  int v_left = -225;
   int v_right = -210;
   
   /**
@@ -63,7 +63,7 @@ int main() {
     //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
-    set_motor(1, 1.1*v_left);
+    set_motor(1, v_left);
     set_motor(1, v_right);
     
     printf(" v_left=%d v_right=%d \n", v_left, v_right);
