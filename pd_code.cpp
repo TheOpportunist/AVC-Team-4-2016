@@ -69,7 +69,7 @@ int main(){
   
     if (total_signal > 0) {
       set_motor(1, 1.5*v);
-      set_motor(2, -1*(v - total_signal));
+      set_motor(2, v - total_signal);
     } else if (total_signal < 0) {
       set_motor(1, 1.5*v + total_signal);
       set_motor(2, v);
