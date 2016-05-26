@@ -42,7 +42,8 @@ int main(){
   //int error;
   //int derivative_signal;
   int proportional_signal;
-  int v = -110;
+  int v_left = -190;
+  int v_right = -215;
   int i, w, s;
 
   while(1) {
@@ -64,18 +65,26 @@ int main(){
     //derivative_signal = (current_error-previous_error/0.1)*kd;
     //previous_error = proportional_signal;
     //printf("Derivative signal is: %d \n", derivative_signal);
+    if proportional_signal > 
     printf("Proportional signal is: %d \n", proportional_signal);
-  
-    //set_motor(1, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
-    //set_motor(2, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
-    //set_motor(1, (v + (proportional_signal/(160*1*kp))*255));
-    //set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
+
+    if (proportional_signal > 65) {
+      proportional_signal = 65;
+    }
+    if ((v_right - proportional_signal) < -255) {
+      (v_right-proportional_signal) = -255;
+    }
+    }
+    if proportional_signal < -65) {
+      proportional_signal = -65;
+    }
+    
     if (proportional_signal > 0) {
-      set_motor(1, v - proportional_signal);
-      set_motor(2, v);
+      set_motor(1, v_left);
+      set_motor(2, v_right - proportional_signal);
     } else if (proportional_signal < 0) {
-      set_motor(1, v);
-      set_motor(2, v + proportional_signal);
+      set_motor(1, v_left + proportional_signal);
+      set_motor(2, v_right);
     }
   }
   return 0;
