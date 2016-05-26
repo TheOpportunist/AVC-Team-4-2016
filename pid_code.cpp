@@ -81,5 +81,7 @@ int main(){
       set_motor(2, v);
     }
   }
+  set_motor(1, 0);
+  set_motor(2, 0);
   return 0;
 }
