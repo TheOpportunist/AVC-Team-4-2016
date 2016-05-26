@@ -40,6 +40,7 @@ int main(){
   int previous_sum = 0;
   int current_sum = 0;
   int proportional_signal;
+  int derivative_signal;
   int v = -160;
   int i, w, s;
 
