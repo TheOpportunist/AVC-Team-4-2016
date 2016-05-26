@@ -63,8 +63,8 @@ int main() {
     //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
-    set_motor(1, v_left);
-    set_motor(1, 1.3*v_right);
+    set_motor(1, 1.1*v_left);
+    set_motor(1, v_right);
     
     printf(" v_left=%d v_right=%d \n", v_left, v_right);
   }
