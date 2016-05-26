@@ -39,8 +39,8 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   int i;
-  int v_left = -190;
-  int v_right = -250;
+  int v_left = -220;
+  int v_right = -190;
   
   /**
    //connects to server with the ip address 192.168.1.2
