@@ -66,13 +66,15 @@ int main(){
     //previous_error = proportional_signal;
     //printf("Derivative signal is: %d \n", derivative_signal);
     
+    left_turn = v_right - proportional_signal;
+    
     printf("Proportional signal is: %d \n", proportional_signal);
 
     if (proportional_signal > 65) {
       proportional_signal = 65;
     }
-    if ((v_right - proportional_signal) < -255) {
-      (v_right-proportional_signal) = -255;
+    if (left_turn < -255) {
+      left_turn = -255;
     }
     }
     if proportional_signal < -65) {
@@ -81,7 +83,7 @@ int main(){
     
     if (proportional_signal > 0) {
       set_motor(1, v_left);
-      set_motor(2, v_right - proportional_signal);
+      set_motor(2, left_turn);
     } else if (proportional_signal < 0) {
       set_motor(1, v_left + proportional_signal);
       set_motor(2, v_right);
