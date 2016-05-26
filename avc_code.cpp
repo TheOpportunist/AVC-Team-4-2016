@@ -121,7 +121,7 @@ int main() {
       rDif = middle - right;
       //v_left = 64;
       //v_right = 128;
-      v_right = v_right + rDif;
+      v_left = v_left - rDif;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
@@ -129,7 +129,7 @@ int main() {
       lDif = middle - left;
       //v_left = 128;
       //v_right = 64;
-      v_left = v_left + lDif;
+      v_right = v_right - lDif;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
