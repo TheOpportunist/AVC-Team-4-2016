@@ -36,7 +36,7 @@ int main(){
   init(0);
   int sum = 0;
   float kp = 0.0005;
-  float kd = 0.05;
+  float kd = 0.03;
   int previous_sum = 0;
   int current_sum = 0;
   int total_signal;
@@ -67,10 +67,7 @@ int main(){
     printf("Derivative signal is: %d \n", derivative_signal);
     printf("Proportional signal is: %d \n", proportional_signal);
   
-    if (total_signal == 0) {
-      set_motor(1, 1.5*v);
-      set_motor(2, v);
-    } else if (total_signal > 0) {
+    if (total_signal > 0) {
       set_motor(1, 1.5*v);
       set_motor(2, -1*(v - total_signal));
     } else if (total_signal < 0) {
