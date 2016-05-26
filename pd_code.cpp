@@ -36,7 +36,7 @@ int main(){
   init(0);
   int sum = 0;
   float kp = 0.0005;
-  float kd = 0.001;
+  float kd = 0.05;
   int previous_sum = 0;
   int current_sum = 0;
   int total_signal;
