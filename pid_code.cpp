@@ -60,7 +60,7 @@ int main(){
       }//;
         sum = sum + (i-160)*s;
     }
-    proportional_signal = sum/kp;
+    proportional_signal = sum*kp;
     //derivative_signal = (current_error-previous_error/0.1)*kd;
     //previous_error = current_error;
     //printf("Derivative signal is: %d /n", derivative_signal);
