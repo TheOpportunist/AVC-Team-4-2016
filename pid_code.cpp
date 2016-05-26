@@ -72,7 +72,7 @@ int main(){
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
     if (proportional_signal > 0) {
       set_motor(1, 1.5*v);
-      set_motor(2, -1*(v - proportional_signal));
+      set_motor(2, v - proportional_signal);
     } else if (proportional_signal < 0) {
       set_motor(1, 1.5*v + proportional_signal);
       set_motor(2, v);
