@@ -65,7 +65,7 @@ int main(){
     //derivative_signal = (current_error-previous_error/0.1)*kd;
     //previous_error = proportional_signal;
     //printf("Derivative signal is: %d \n", derivative_signal);
-    if proportional_signal > 
+    
     printf("Proportional signal is: %d \n", proportional_signal);
 
     if (proportional_signal > 65) {
