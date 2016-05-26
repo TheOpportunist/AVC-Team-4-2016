@@ -36,7 +36,7 @@ int main(){
   init(0);
   int sum = 0;
   float kp = 0.0005;
-  float kd = 5.0;
+  float kd = 0.001;
   int previous_sum = 0;
   int current_sum = 0;
   int total_signal;
@@ -60,7 +60,7 @@ int main(){
     }
     Sleep(0,1000);
     proportional_signal = sum*kp;
-    derivative_signal = (sum - previous_sum/0.001)*kd;
+    derivative_signal = (sum - previous_sum)*kd;
     previous_sum = sum;
     total_signal = proportional_signal + derivative_signal;
     
