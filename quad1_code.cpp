@@ -42,6 +42,7 @@ int main() {
   int v_left = -150;
   int v_right = -150;
   
+  /**
    //connects to server with the ip address 192.168.1.2
    connect_to_server("130.195.6.196", 1024);
    //sends a message to the connected server
@@ -51,6 +52,7 @@ int main() {
    receive_from_server(message); //this may be buggy!
    printf("%s", message);
    send_to_server(message);
+   **/
   
   while(true) {
     take_picture();
