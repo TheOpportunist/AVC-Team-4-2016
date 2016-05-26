@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.1;
+  float kp = 320;
   //float kd = 5;
   //int current_error = 0;
   //int previous_error; 
@@ -58,9 +58,9 @@ int main(){
       else{
         s=0;
       }//;
-        sum = sum + (i-160)*s*w;
+        sum = sum + (i-160)*s;
     }
-    proportional_signal = sum*kp;
+    proportional_signal = sum/kp;
     //derivative_signal = (current_error-previous_error/0.1)*kd;
     //previous_error = current_error;
     //printf("Derivative signal is: %d /n", derivative_signal);
