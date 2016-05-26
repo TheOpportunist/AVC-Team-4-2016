@@ -42,7 +42,7 @@ int main(){
   //int error;
   //int derivative_signal;
   int proportional_signal;
-  int v = -45;
+  int v = -100;
   int i, w, s;
 
   while(1) {
