@@ -39,8 +39,8 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   int i;
-  int v_left = -220;
-  int v_right = -190;
+  int v_left = -190;
+  int v_right = 0;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -63,8 +63,8 @@ int main() {
     //right = get_pixel(240, 120, 3);
     //printf(" left=%d middle=%d right=%d \n", left, middle, right);
     
-    set_motor(1, v_left);
-    set_motor(2, v_right);
+    set_motor(1, v_right);
+    set_motor(2, v_left);
     
     printf(" v_left=%d v_right=%d \n", v_left, v_right);
   }
