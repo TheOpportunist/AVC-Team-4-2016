@@ -118,7 +118,7 @@ int main() {
       set_motor(2, -1*v_right);
     }
     else if (right > middle && right > left) {
-      rDif = middle - right;
+      rDif = right - middle;
       //v_left = 64;
       //v_right = 128;
       v_right = v_right + rDif;
@@ -126,7 +126,7 @@ int main() {
       set_motor(2, -1*v_right);
     }
     else if (left > middle && left > right) {
-      lDif = middle - left;
+      lDif = left - middle;
       //v_left = 128;
       //v_right = 64;
       v_left = v_left + lDif;
