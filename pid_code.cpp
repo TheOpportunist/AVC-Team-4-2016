@@ -42,7 +42,7 @@ int main(){
   //int error;
   //int derivative_signal;
   int proportional_signal;
-  int v = -80;
+  int v = -120;
   int i, w, s;
 
   while(1) {
@@ -72,13 +72,13 @@ int main(){
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
     proportional_signal = 0;
     if (proportional_signal == 0) {
-      set_motor(1, 2*v);
+      set_motor(1, v);
       set_motor(2, v);
     } else if (proportional_signal > 0) {
-      set_motor(1, 2*v);
+      set_motor(1, v);
       set_motor(2, -1*(v - proportional_signal));
     } else if (proportional_signal < 0) {
-      set_motor(1, 2*v - proportional_signal);
+      set_motor(1, v - proportional_signal);
       set_motor(2, v);
     }
   }
