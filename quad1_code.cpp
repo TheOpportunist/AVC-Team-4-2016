@@ -40,7 +40,7 @@ int main() {
   init(0);
   int i;
   int v_left = -210;
-  int v_right = -210;
+  int v_right = -230;
   
   /**
    //connects to server with the ip address 192.168.1.2
