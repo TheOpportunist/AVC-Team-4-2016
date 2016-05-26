@@ -53,8 +53,8 @@ int main() {
   int v_right = 0;
   */
   
-  int v_left = 150;
-  int v_right = 150;
+  int v_left = 180;
+  int v_right = 180;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -112,8 +112,8 @@ int main() {
     */
     
     if (middle > left && middle > right){
-      v_left = 150;
-      v_right = 150;
+      v_left = 180;
+      v_right = 180;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
