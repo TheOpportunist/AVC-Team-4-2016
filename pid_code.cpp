@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.0001;
+  float kp = 0.0005;
   //float kd = 5;
   //int current_error = 0;
   //int previous_error; 
@@ -62,7 +62,7 @@ int main(){
     }
     proportional_signal = sum*kp;
     //derivative_signal = (current_error-previous_error/0.1)*kd;
-    //previous_error = current_error;
+    //previous_error = proportional_signal;
     //printf("Derivative signal is: %d /n", derivative_signal);
     printf("Proportional signal is: %d /n", proportional_signal);
   
@@ -70,8 +70,8 @@ int main(){
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
     //set_motor(1, (v + (proportional_signal/(160*1*kp))*255));
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
-    set_motor(1, proportional_signal);
-    set_motor(2, proportional_signal);
+    set_motor(1, v + proportional_signal);
+    set_motor(2, v + proportional_signal);
   }
   return 0;
 }
