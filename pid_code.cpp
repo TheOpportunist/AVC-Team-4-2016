@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.0005;
+  float kp = 0.0001;
   //float kd = 5;
   //int current_error = 0;
   //int previous_error; 
