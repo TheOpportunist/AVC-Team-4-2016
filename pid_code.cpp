@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.0001;
+  float kp = 0.01;
   float kd = 5;
   //int current_error = 0;
   //int previous_error; 
@@ -53,10 +53,10 @@ int main(){
       //error = (i-160)*w;
       //current_error = current_error + error;
       if(w>127){
-         s=0;
+         s=1;
       }//;
       else{
-        s=1;
+        s=0;
       }//;
         sum = sum + (i-160)*s;
     }
