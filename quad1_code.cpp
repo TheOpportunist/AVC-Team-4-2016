@@ -39,7 +39,7 @@ extern "C" int receive_from_server(char message[24]);
 int main() {
   init(0);
   int i;
-  int v_left = -225;
+  int v_left = -250;
   int v_right = -210;
   
   /**
