@@ -45,6 +45,7 @@ int main(){
   int v_left = -190;
   int v_right = -215;
   int i, w, s;
+  int left_turn;
 
   while(1) {
     take_picture();
