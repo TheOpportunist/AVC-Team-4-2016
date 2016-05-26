@@ -33,9 +33,6 @@ extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
 extern "C" int receive_from_server(char message[24]);
 
-int v_left = 0;
-int v_right = 0;
-
 //extern "C" int init(int d_lev);
 extern "C" int connect_to_server( char server_addr[15],int port);
 extern "C" int send_to_server(char message[24]);
@@ -47,6 +44,17 @@ int main() {
   int left;
   int right;
   int middle;
+  int lDif;
+  int mDif;
+  int rDif;
+  
+  /**
+  int v_left = 0;
+  int v_right = 0;
+  */
+  
+  int v_left = 128;
+  int v_right = 128;
   
   /**
    //connects to server with the ip address 192.168.1.2
@@ -104,20 +112,24 @@ int main() {
     */
     
     if (middle > left && middle > right){
-      v_left = 200;
-      v_right = 200;
+      v_left = 128;
+      v_right = 128;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (right > middle && right > left) {
-      v_left = 200;
-      v_right = 150;
+      rDif = right - middle;
+      //v_left = 64;
+      //v_right = 128;
+      v_right = v_right + rDif;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
     else if (left > middle && left > right) {
-      v_left = 150;
-      v_right = 200;
+      lDif = middle - left;
+      //v_left = 128;
+      //v_right = 64;
+      v_left = v_left + lDif;
       set_motor(1, -1*v_left);
       set_motor(2, -1*v_right);
     }
