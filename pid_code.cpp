@@ -78,7 +78,7 @@ int main(){
       left_turn = -255;
     }
     }
-    if proportional_signal < -65) {
+    if (proportional_signal < -65) {
       proportional_signal = -65;
     }
     
