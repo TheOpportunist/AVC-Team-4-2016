@@ -35,7 +35,7 @@ extern "C" int receive_from_server(char message[24]);
 int main(){
   init(0);
   int sum = 0;
-  float kp = 0.5;
+  float kp = 0.0001;
   float kd = 5;
   //int current_error = 0;
   //int previous_error; 
@@ -68,8 +68,10 @@ int main(){
   
     //set_motor(1, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
     //set_motor(2, (v + (proportional_signal/(160*1*kp))*255 + derivative_signal));
-    set_motor(1, (v + (proportional_signal/(160*1*kp))*255));
-    set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
+    //set_motor(1, (v + (proportional_signal/(160*1*kp))*255));
+    //set_motor(2, (v + (proportional_signal/(160*1*kp))*255));
+    set_motor(1, (v + (proportional_signal);
+    set_motor(2, (v + (proportional_signal);
   }
   return 0;
 }
