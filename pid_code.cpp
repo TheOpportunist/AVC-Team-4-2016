@@ -39,7 +39,7 @@ int main(){
   //float kd = 5;
   //int current_error = 0;
   //int previous_error; 
-  //int error;
+  int error;
   //int derivative_signal;
   int proportional_signal;
   int v_left = -190;
@@ -53,6 +53,7 @@ int main(){
     for(i=0; i<320; i++){
       w = get_pixel(i,120,3);
       //error = (i-160)*w;
+      error = (160-i);
       //current_error = current_error + error;
       if(w>127){
          s=1;
@@ -60,9 +61,10 @@ int main(){
       else{
         s=0;
       }//;
-        sum = sum + (i-160)*s;
+        //sum = sum + (i-160)*s;
     }
-    proportional_signal = sum*kp;
+    proportional_signal = error*kp
+    //proportional_signal = sum*kp;
     //derivative_signal = (current_error-previous_error/0.1)*kd;
     //previous_error = proportional_signal;
     //printf("Derivative signal is: %d \n", derivative_signal);
